@@ -8,7 +8,7 @@ import HomeView from "./components/HomeView/HomeView";
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/mp2">
       <div className="App">
         
         <main className="app-main">

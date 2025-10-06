@@ -1,7 +1,8 @@
 {
-  "name": "mp2-react",
+  "name": "mp2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://siyuchen0227.github.io/mp2",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.0",
