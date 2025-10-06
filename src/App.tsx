@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ListView from "./components/ListView/ListView";
 import "./App.css";
+import DetailView from "./components/DetailView/DetailView";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           </div>
           <Routes>
             <Route path="/list" element={<ListView />} />
+           <Route path="/detail/:id" element={<DetailView />} />
           </Routes>
         </main>
       </div>
