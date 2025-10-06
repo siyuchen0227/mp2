@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import ListView from "./components/ListView/ListView";
 import "./App.css";
 
 function App() {
@@ -28,7 +28,9 @@ function App() {
               </div>
             </div>
           </div>
-        
+          <Routes>
+            <Route path="/list" element={<ListView />} />
+          </Routes>
         </main>
       </div>
     </Router>
