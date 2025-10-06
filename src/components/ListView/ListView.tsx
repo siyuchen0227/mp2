@@ -58,11 +58,7 @@ const sortedMeals = useMemo(() => {
   });
 }, [meals, sortField, sortOrder]);
 
-const SortIndicator: React.FC<{ field: SortField; currentField: SortField; order: SortOrder }> = 
-  ({ field, currentField, order }) => {
-  if (field !== currentField) return null;
-  return <span>{order === 'asc' ? ' ↑' : ' ↓'}</span>;
-};
+
   const handleSortChange = (field: SortField) => {
     if (sortField === field) {
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
