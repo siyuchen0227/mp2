@@ -1,0 +1,131 @@
+.home-view {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.home-view h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reference-category {
+  margin-bottom: 40px;
+}
+
+.reference-category h2 {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.reference-card {
+  display: block;
+  padding: 20px;
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+
+
+
+.reference-name {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.reference-url {
+  display: block;
+  font-size: 0.85em;
+  color: #7f8c8d;
+  word-break: break-all;
+}
+
+.note {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 25px;
+  margin-top: 40px;
+  border-radius: 4px;
+}
+
+.note h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.note p {
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .home-view {
+    padding: 20px 15px;
+  }
+  
+  .home-view h1 {
+    font-size: 2em;
+  }
+  
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reference-card {
+    padding: 16px;
+  }
+}
+
+
+.reference-card[href*="youtube"] {
+  border-left: 4px solid #ff0000;
+}
+
+.reference-card[href*="github"] {
+  border-left: 4px solid #333;
+}
+
+.reference-card[href*="mdn"] {
+  border-left: 4px solid #83d0f2;
+}
+
+.reference-card[href*="reactjs.org"] {
+  border-left: 4px solid #61dafb;
+}
+
+.reference-card[href*="typescript"] {
+  border-left: 4px solid #3178c6;
+}

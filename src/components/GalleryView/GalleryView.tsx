@@ -23,7 +23,6 @@ const GalleryView = () => {
       setLoading(true);
       try {
         if (selectedCategory === 'all') {
-          // 获取所有类别的餐点
           const allMeals: MealSummary[] = [];
           for (const category of categories) {
             const categoryMeals = await mealService.getMealsByCategory(category);
@@ -35,7 +34,6 @@ const GalleryView = () => {
           }
           setMeals(allMeals);
         } else {
-          // 获取特定类别的餐点
           const categoryMeals = await mealService.getMealsByCategory(selectedCategory);
           const mealsWithCategory = categoryMeals.map(meal => ({
             ...meal,

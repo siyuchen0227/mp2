@@ -15,16 +15,14 @@ const DetailView = () => {
 
 
 
-  // 获取所有餐点的ID用于导航
+
   useEffect(() => {
     const fetchAllMealIds = async () => {
       try {
-        // 搜索一个空字符串来获取一些餐点（API限制，无法获取所有）
         const meals = await mealService.searchMeals('');
         const ids = meals.map(meal => meal.idMeal);
         setAllMealIds(ids);
         
-        // 设置当前索引
         if (id) {
           const index = ids.indexOf(id);
           if (index !== -1) {
@@ -83,7 +81,6 @@ const DetailView = () => {
     }
   };
 
-  // 提取食材和测量单位
   const getIngredients = () => {
     if (!meal) return [];
     

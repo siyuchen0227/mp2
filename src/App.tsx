@@ -4,6 +4,7 @@ import ListView from "./components/ListView/ListView";
 import "./App.css";
 import DetailView from "./components/DetailView/DetailView";
 import GalleryView from "./components/GalleryView/GalleryView";
+import HomeView from "./components/HomeView/HomeView";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             </div>
           </div>
           <Routes>
+            <Route path="/" element={<HomeView />} />
             <Route path="/gallery" element={<GalleryView />} />
             <Route path="/list" element={<ListView />} />
            <Route path="/detail/:id" element={<DetailView />} />

@@ -57,7 +57,7 @@ const sortedMeals = useMemo(() => {
     return 0;
   });
 }, [meals, sortField, sortOrder]);
-// 添加排序指示器组件
+
 const SortIndicator: React.FC<{ field: SortField; currentField: SortField; order: SortOrder }> = 
   ({ field, currentField, order }) => {
   if (field !== currentField) return null;

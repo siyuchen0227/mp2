@@ -3,9 +3,8 @@ import { Meal, MealSummary } from '../types/meal';
 
 const BASE_URL = 'https://www.themealdb.com/api/json/v1/1';
 
-// 简单的缓存机制
 const cache: { [key: string]: { data: any, timestamp: number } } = {};
-const CACHE_DURATION = 5 * 60 * 1000; // 5分钟
+const CACHE_DURATION = 5 * 60 * 1000; 
 
 const withCache = async (key: string, apiCall: () => Promise<any>) => {
   const now = Date.now();
@@ -27,7 +26,6 @@ export const mealService = {
       });
     } catch (error) {
       console.error('Search error:', error);
-      // 返回模拟数据作为降级方案
       return [
         {
           idMeal: '1',
